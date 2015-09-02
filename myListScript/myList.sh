@@ -7,4 +7,4 @@ ls -al >> $OUTPUTFILE
 echo "" >> $OUTPUTFILE
 echo "</html>" >> $OUTPUTFILE
 
-iceweasel -new-tab ./$OUTPUTFILE || firefox -new-tab ./$OUTPUTFILE
+(iceweasel -new-tab ./$OUTPUTFILE || firefox -new-tab ./$OUTPUTFILE) 2>/dev/null
