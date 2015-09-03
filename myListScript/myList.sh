@@ -1,3 +1,4 @@
+#!/bin/bash
 OUTPUTFILE="ls.html"
 touch $OUTPUTFILE
 chmod +rwx $OUTPUTFILE
