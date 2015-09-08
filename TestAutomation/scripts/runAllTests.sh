@@ -10,8 +10,10 @@ TESTCASESEXEC="../testCasesExecutables"
 ls $TESTCASES| while read line 
 do
 	echo "Run testcase executable based off of $line specifications."
-	
+	echo ""
 	#test to see if we can cat all files in the testcases directory
 	cat "$TESTCASES"/"$line"
+	echo ""
+	echo""
 done
 
