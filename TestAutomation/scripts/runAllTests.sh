@@ -24,7 +24,7 @@ do
 		####Delete comments
 		#Get position of hash character
 		#Thanks to modified responses to:
-		#http://stackoverflow.com/questions/15256149/bash-variable-from-command-with-pipes-quotes-etc 
+		#http://stackoverflow.com/questions/20348097/bash-extract-string-before-a-colon 
 		
 		CHARPOS=$(echo $TESTCASESLINECHOPPED | grep -b -o "#" | cut -d: -f1)
 		
