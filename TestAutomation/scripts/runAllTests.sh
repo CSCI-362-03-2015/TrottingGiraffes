@@ -21,11 +21,18 @@ do
 		#Cut off numbers at beginning of lines
 		TESTCASESLINECHOPPED="${TESTCASESLINE:3:$TESTCASESLINELENGTH}"
 		
-		#Delete comments in the future
-		echo ${TESTCASESLINECHOPPED%"#*"}
+		####Delete comments
+		#Get position of hash character
+		#Thanks to modified responses to:
+		#http://stackoverflow.com/questions/15256149/bash-variable-from-command-with-pipes-quotes-etc 
+		
+		CHARPOS=$(echo $TESTCASESLINECHOPPED | grep -b -o "#" | cut -d: -f1)
+		
+		#Get substring with comment removed
+		echo ${TESTCASESLINECHOPPED:0:$CHARPOS}	
 	done
  
 	echo ""
-	echo""
+	echo ""
 done
 
