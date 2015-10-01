@@ -3,4 +3,4 @@
 3. Testing the arbitrary component ##component being tested
 4. arbitraryMethod ##method being tested
 5. "&#x000a;" ##command-line arguments
-6. "\\n" ##expected outcomes, only \n will actually be tested, not \\n. \\n means \n in the bash script.
+6. "\\n" ##expected outcomes, only \n will actually be tested, not \\n

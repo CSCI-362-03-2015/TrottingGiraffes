@@ -39,21 +39,23 @@ do
 		if [ $COUNTER -eq 5 ]
 		then
 			TEST=$CHOPPED
+			echo "If statement got test: $TEST"
 		fi
 
 		if [ $COUNTER -eq 6 ]
 		then
 			ORACLE=$CHOPPED
-			
-			cd ../testCasesExecutables
-
-			javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/TrottingEncodingTest.java && java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/TrottingEncodingTest $TEST $ORACLE
-			
+			echo "If statement got oracle: $ORACLE and test is still $TEST"
 		fi
 	done
  
 	echo ""
 	echo ""
+
+	cd ../testCasesExecutables
+	echo "Right before java test: $TEST"
+	echo "Right before java oracle: $ORACLE"
+	javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/TrottingEncodingTest.java && java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/TrottingEncodingTest $TEST $ORACLE
 
 done
 
