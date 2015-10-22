@@ -22,7 +22,6 @@ do
 
 		#Get length of line string for formatting
 		TESTCASESLINELENGTH=${#TESTCASESLINE}
-		
 		#Cut off numbers at beginning of lines
 		TESTCASESLINECHOPPED="${TESTCASESLINE:3:$TESTCASESLINELENGTH}"
 		
@@ -47,9 +46,12 @@ do
 			
 			cd ../testCasesExecutables
 
-			javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/TrottingEncodingTest.java && java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/TrottingEncodingTest $TEST $ORACLE
+			javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/TrottingEncodingTest1.java && java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/TrottingEncodingTest1 $TEST $ORACLE
+
 			
 		fi
+		touch "../reports/resultsForTestNumber$COUNTER.txt"
+
 	done
  
 	echo ""
