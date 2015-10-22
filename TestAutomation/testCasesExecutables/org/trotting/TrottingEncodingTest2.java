@@ -1,6 +1,6 @@
 package org.trotting;
 
-class TrottingEncodingTest{
+class TrottingEncodingTest1{
 	
 	public static void main(String[] args){
 		try{

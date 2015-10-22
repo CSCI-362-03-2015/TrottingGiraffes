@@ -1,6 +1,6 @@
 package org.trotting;
 
-class TrottingEncodingTest{
+class TrottingEncodingTest1{
 	
 	public static void main(String[] args){
 		try{
@@ -9,9 +9,10 @@ class TrottingEncodingTest{
 
 			String result = org.owasp.html.Encoding.decodeHtml(theTest);
 			if(theOracle.contains("\\n")){
-				System.out.println("Oracle contains: \\n");
+				//System.out.println("Oracle contains: \\n");
 				 theOracle = theOracle.replace("\\n","\n");
 			}
+	
 
 			if((result).equals(theOracle)){
 				try{
