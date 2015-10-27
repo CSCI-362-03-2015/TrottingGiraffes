@@ -76,18 +76,13 @@ do
 		OUTPUTFILE2="$CLASSNAME.txt"
 		OUTPUTFILE="$OUTPUTFILE1$OUTPUTFILE2"
 
-		echo $OUTPUTFILE
 
 		touch $OUTPUTFILE
 
 			javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/$JAVACSTRING.java && echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/$JAVASTRING $TEST $ORACLE) > $OUTPUTFILE
 
 
-		HTMLOUTPUTFILE1="test$TESTNUMBER"
-		HTMLOUTPUTFILE2="results.html"
-		HTMLOUTPUTFILE="$HTMLOUTPUTFILE1$HTMLOUTPUTFILE2"
-		
-		../scripts/toHtml.sh $HTMLOUTPUTFILE $OUTPUTFILE
+
 			
 		fi
 
@@ -97,4 +92,8 @@ do
 	echo ""
 
 done
+
+		HTMLOUTPUTFILE="../reports/myResults.html"
+		
+		./toCompiledHtml.sh $HTMLOUTPUTFILE ../reports
 
