@@ -1,5 +1,5 @@
 1. 9##test number or ID
-2. Testing the HTML Sanitizer ##requirement being tested
+2. Testing a normal String with cssContent##requirement being tested
 3. orgowasphtmlCssGrammar##component being tested
 4. cssContent##method being tested
 5. foo##command-line arguments
