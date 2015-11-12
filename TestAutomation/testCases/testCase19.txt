@@ -1,5 +1,5 @@
 1. 19##test number or ID
-2. Testing the HTML Sanitizer ##requirement being tested
+2. Testing how sanitize deals with formatting tags including onClick##requirement being tested
 3. orgowasphtmlSanitizers##component being tested
 4. sanitize##method being tested
 5. FORMATTING <p>Hello,<bonclick=alert(1337)>World</b>!</p>##command-line arguments
