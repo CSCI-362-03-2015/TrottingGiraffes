@@ -1,4 +1,4 @@
-1. 3##test number or ID
+1. 03##test number or ID
 2. Testing the HTML Sanitizer ##requirement being tested
 3. orgowasphtmlEncoding##component being tested
 4. decodeHtml##method being tested
