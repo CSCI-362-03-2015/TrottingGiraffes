@@ -17,7 +17,7 @@ echo "<html>" > $OUTPUTFILE
 echo "" >> $OUTPUTFILE
 echo "<body>" >> $OUTPUTFILE
 
-echo "<table border>" >> $OUTPUTFILE # style=\"width:100%\">" >> $OUTPUTFILE
+echo "<table>" >> $OUTPUTFILE # style=\"width:100%\">" >> $OUTPUTFILE
 
 
 

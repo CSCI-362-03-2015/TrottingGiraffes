@@ -10,6 +10,18 @@ cd ../../../scripts
 #Move to test cases directory
 #cd $TESTCASES // if we do this, we can't use variables for relative location
 
+cd ../testCasesExecutables/
+ls ./org/trotting | while read FILENAME 
+do
+
+	#test to see if we can cat all files in the testcases directory
+	javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:/home/securepaas/TrottingGiraffes/TrottingGiraffes/TestAutomation/project/src/java-html-sanitizer-master/lib org/trotting/$FILENAME
+
+done
+
+
+cd ../../../scripts
+
 ls $TESTCASES | while read FILENAME 
 do
 	echo "Run testcase executable based off of $FILENAME specifications."
@@ -94,6 +106,7 @@ do
 done
 
 		HTMLOUTPUTFILE="../reports/myResults.html"
+		cd ../scripts
 		
 		./toCompiledHtml.sh $HTMLOUTPUTFILE ../reports
 

@@ -12,8 +12,8 @@ touch $OUTPUTFILE
 chmod +rwx $OUTPUTFILE
 
 #Writes html header tag to output file
-#echo "<!DOCTYPE html>" > $OUTPUTFILE
-echo "<html>" > $OUTPUTFILE
+echo "<!DOCTYPE html>" > $OUTPUTFILE
+echo "<html>" >> $OUTPUTFILE
 echo "" >> $OUTPUTFILE
 echo "<body>" >> $OUTPUTFILE
 

@@ -28,7 +28,7 @@
 
 package org.owasp.html;
 
-final class CssGrammar {
+public final class CssGrammar {
 
   private static void errorRecoveryUntilSemiOrCloseBracket(
       CssTokens.TokenIterator it) {
@@ -151,7 +151,7 @@ final class CssGrammar {
   /**
    * Decodes any escape sequences and strips any quotes from the input.
    */
-  static String cssContent(String token) {
+  public static String cssContent(String token) {
     int n = token.length();
     int pos = 0;
     StringBuilder sb = null;
