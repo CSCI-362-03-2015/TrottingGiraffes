@@ -1,5 +1,5 @@
 1. 22##test number or ID
-2. Testing the HTML Sanitizer ##requirement being tested
+2. Testing how sanitize and BLOCKS pulls out several tags##requirement being tested
 3. orgowasphtmlSanitizers##component being tested
 4. sanitize##method being tested
 5. BLOCKS <b&nbsp;onclick=alert(1337)>Hello,<b>World</b>!</b>##command-line arguments
