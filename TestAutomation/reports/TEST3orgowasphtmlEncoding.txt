@@ -1,0 +1,1 @@
+passed org.owasp.html.Encoding.decodeHtml("&#x00ziggy")

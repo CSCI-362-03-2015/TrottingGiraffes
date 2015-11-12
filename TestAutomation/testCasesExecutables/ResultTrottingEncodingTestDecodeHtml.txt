@@ -1,0 +1,5 @@
+TrottingTest failed.
+org.owasp.html.Encoding.decodeHtml("&#x000a;");
+Oracle: "n"
+Result: "
+"
