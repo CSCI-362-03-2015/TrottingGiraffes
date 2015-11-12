@@ -1,5 +1,5 @@
 1. 20##test number or ID
-2. Testing the HTML Sanitizer ##requirement being tested
+2. Testing a tagless String with sanitize and BLOCKS##requirement being tested
 3. orgowasphtmlSanitizers##component being tested
 4. sanitize##method being tested
 5. BLOCKS Hello,World!##command-line arguments
