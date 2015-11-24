@@ -3,4 +3,4 @@
 3. orgowasphtmlIsHex##component being tested
 4. isHex##method being tested
 5. 0xZZZZ##command-line arguments
-6. False##expected outcomes
+6. false##expected outcomes

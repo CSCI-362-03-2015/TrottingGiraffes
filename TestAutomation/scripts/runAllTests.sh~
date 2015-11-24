@@ -4,8 +4,13 @@
 TESTCASES="../testCases"
 TESTCASESEXEC="../testCasesExecutables"
 
+
+
 cd ../project/src/java-html-sanitizer-master
-#mvn clean install
+	mkdir -p target/classes
+	pwd
+	javac -cp $JAVA_HOME:lib/guava-libraries/guava.jar:lib/guava-libraries/guava-src.jar:lib/commons-codec-1.4/commons-codec-1.4.jar:lib/htmlparser-1.3/htmlparser-1.3.jar:lib/htmlparser-1.3/htmlparser-1.3-with-transitions.jar:lib/jsr305/jsr305.jar:lib/junit/junit.jar:lib/junit/junit-dep.jar:lib/junit/junit-src.jar:. ./src/main/java/org/owasp/html/*.java ./src/main/java/org/owasp/html/examples/*.java -d ./target/classes
+
 cd ../../../scripts
 #Move to test cases directory
 #cd $TESTCASES // if we do this, we can't use variables for relative location
@@ -91,7 +96,8 @@ do
 
 		touch $OUTPUTFILE
 
-			javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/$JAVACSTRING.java && echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/$JAVASTRING $TEST $ORACLE) > $OUTPUTFILE
+			#javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/$JAVACSTRING.java && 
+echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/$JAVASTRING $TEST $ORACLE) > $OUTPUTFILE
 
 
 
@@ -108,5 +114,6 @@ done
 		HTMLOUTPUTFILE="../reports/myResults.html"
 		cd ../scripts
 		
-		toCompiledHtml.sh $HTMLOUTPUTFILE ../reports
+		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../reports && firefox -new-tab ./$HTMLOUTPUTFILE) 
+#2>/dev/null
 

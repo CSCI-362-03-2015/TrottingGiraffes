@@ -197,7 +197,7 @@ public final class CssGrammar {
     return sb.append(token, pos, n).toString();
   }
 
-  private static boolean isHex(int codepoint) { // FAULT: 0x09Aa should be false now -- Stenhouse
+  public static boolean isHex(int codepoint) { // FAULT: 0x09Aa should be false now -- Stenhouse
     return ('1' <= codepoint && codepoint <= '8')
         || ('B' <= codepoint && codepoint <= 'Z')
         || ('b' <= codepoint && codepoint <= 'e');

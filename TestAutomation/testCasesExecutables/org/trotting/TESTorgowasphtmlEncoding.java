@@ -16,9 +16,11 @@ class TESTorgowasphtmlEncoding{
 
 			if((result).equals(theOracle)){
 				try{
-
+					System.out.println("org.owasp.html.Encoding");
+					System.out.println("decodeHtml(String)");
+					System.out.println(args[0]);
+					System.out.println(args[1]);
 					System.out.println("passed\n");
-					System.out.println("org.owasp.html.Encoding.decodeHtml("+theTest+")\n");
 				
 				}catch(Exception e){
 					e.printStackTrace();	
@@ -27,8 +29,11 @@ class TESTorgowasphtmlEncoding{
 			}
 			else{
 				try{
+					System.out.println("org.owasp.html.Encoding");
+					System.out.println("decodeHtml(String)");
+					System.out.println(args[0]);
+					System.out.println(args[1]);
 					System.out.println("failed\n");
-					System.out.println("org.owasp.html.Encoding.decodeHtml("+theTest+")\n");
 					
 				}catch(Exception e){
 					e.printStackTrace();

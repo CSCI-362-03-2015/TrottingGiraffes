@@ -17,8 +17,11 @@ class TESTorgowasphtmlCssGrammar{
 			if((result).compareTo(theOracle) == 0){
 				try{
 
+					System.out.println("org.owasp.html.CssGrammar");
+					System.out.println("cssContent(String)");
+					System.out.println(args[0]);
+					System.out.println(args[1]);
 					System.out.println("passed\n");
-					System.out.println("org.owasp.html.CssGrammar.cssContent("+theTest+")\n");
 				
 				}catch(Exception e){
 					e.printStackTrace();	
@@ -27,11 +30,11 @@ class TESTorgowasphtmlCssGrammar{
 			}
 			else{
 				try{
+					System.out.println("org.owasp.html.CssGrammar");
+					System.out.println("cssContent(String)");
+					System.out.println(args[1]);
+					System.out.println(args[0]);
 					System.out.println("failed\n");
-					System.out.println("org.owasp.html.CssGrammar.cssContent("+theTest+")\n");
-					System.out.println("Test: " + theTest);
-					System.out.println("Oracle: " + theOracle);
-					System.out.println("Result: " + result);
 				}catch(Exception e){
 					e.printStackTrace();
 				}

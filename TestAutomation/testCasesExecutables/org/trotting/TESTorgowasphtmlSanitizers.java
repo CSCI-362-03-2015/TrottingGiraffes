@@ -19,8 +19,11 @@ class TESTorgowasphtmlSanitizers{
 				if((result).compareTo(theOracle) == 0){
 					try{
 
+						System.out.println("org.owasp.html.Sanitizers");
+						System.out.println("FORMATTING.sanitize(String)");
+						System.out.println(args[1]);
+						System.out.println(args[2]);
 						System.out.println("passed\n");
-						System.out.println("org.owasp.html.Sanitizers.FORMATTING.sanitize("+theTest+")\n");
 				
 					}catch(Exception e){
 						e.printStackTrace();	
@@ -29,11 +32,11 @@ class TESTorgowasphtmlSanitizers{
 				}
 				else{
 					try{
+						System.out.println("org.owasp.html.Sanitizers");
+						System.out.println("FORMATTING.sanitize(String)");
+						System.out.println(args[1]);
+						System.out.println(args[2]);
 						System.out.println("failed\n");
-						System.out.println("org.owasp.html.Sanitizers.FORMATTING.sanitize("+theTest+")\n");
-						System.out.println("Test: " + theTest);
-						System.out.println("Oracle: " + theOracle);
-						System.out.println("Result: " + result);
 					}catch(Exception e){
 						e.printStackTrace();
 					}
@@ -50,8 +53,11 @@ class TESTorgowasphtmlSanitizers{
 				if((result).compareTo(theOracle) == 0){
 					try{
 
+						System.out.println("org.owasp.html.Sanitizers");
+						System.out.println("BLOCKS.sanitize(String)");
+						System.out.println(args[1]);
+						System.out.println(args[2]);
 						System.out.println("passed\n");
-						System.out.println("org.owasp.html.Sanitizers.BLOCKS.sanitize("+theTest+")\n");
 				
 					}catch(Exception e){
 						e.printStackTrace();	
@@ -60,11 +66,11 @@ class TESTorgowasphtmlSanitizers{
 				}
 				else{
 					try{
+						System.out.println("org.owasp.html.Sanitizers");
+						System.out.println("BLOCKS.sanitize(String)");
+						System.out.println(args[1]);
+						System.out.println(args[2]);
 						System.out.println("failed\n");
-						System.out.println("org.owasp.html.Sanitizers.BLOCKS.sanitize("+theTest+")\n");
-						System.out.println("Test: " + theTest);
-						System.out.println("Oracle: " + theOracle);
-						System.out.println("Result: " + result);
 					}catch(Exception e){
 						e.printStackTrace();
 					}
