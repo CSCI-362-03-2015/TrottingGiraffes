@@ -1,5 +1,5 @@
 1. 08##test number or ID
-2. Testing how cssContent handles Unicode inserted in between a String##requirement being tested
+2. cssContent handles escape sequences and strips any quotes from the input ##requirement being tested
 3. orgowasphtmlCssGrammar##component being tested
 4. cssContent##method being tested
 5. t\\61ser##command-line arguments

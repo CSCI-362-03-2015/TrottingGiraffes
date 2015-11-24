@@ -1,5 +1,5 @@
 1. 05##test number or ID
-2. Testing the HTML Sanitizer ##requirement being tested
+2. decodeHtml handles HTML entities to produce a string containing only valid unicode scalar values ##requirement being tested
 3. orgowasphtmlEncoding##component being tested
 4. decodeHtml##method being tested
 5. "&#x00a;"##command-line arguments
