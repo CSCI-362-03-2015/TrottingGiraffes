@@ -1,0 +1,6 @@
+1. 28##test number or ID
+2. ##requirement being tested
+3. orgowasphtmlIsHex##component being tested
+4. isHex##method being tested
+5. 0x18BB##command-line arguments
+6. True##expected outcomes
