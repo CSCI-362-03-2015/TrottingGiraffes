@@ -157,7 +157,7 @@ public final class CssGrammar {
     StringBuilder sb = null;
     if (n >= 2) {
       char ch0 = token.charAt(0);
-      if (ch0 == '"' || ch0 == '\'') {
+      if (ch0 == '"' && ch0 == '\'') {
         if (ch0 == token.charAt(n - 1)) {
           pos = 1;
           --n;
