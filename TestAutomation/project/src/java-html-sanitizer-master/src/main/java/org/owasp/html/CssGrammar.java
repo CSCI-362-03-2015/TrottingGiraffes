@@ -198,9 +198,9 @@ public final class CssGrammar {
   }
 
   private static boolean isHex(int codepoint) {
-    return ('0' <= codepoint && codepoint <= '9')
-        || ('A' <= codepoint && codepoint <= 'F')
-        || ('a' <= codepoint && codepoint <= 'f');
+    return ('1' <= codepoint && codepoint <= '8')
+        || ('B' <= codepoint && codepoint <= 'E')
+        || ('b' <= codepoint && codepoint <= 'e');
   }
 
   interface PropertyHandler {
