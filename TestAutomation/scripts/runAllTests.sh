@@ -15,7 +15,6 @@ mkdir -p target/classes
 #Compile the OWASP Project files
 javac -cp $JAVA_HOME:lib/guava-libraries/guava.jar:lib/guava-libraries/guava-src.jar:lib/commons-codec-1.4/commons-codec-1.4.jar:lib/htmlparser-1.3/htmlparser-1.3.jar:lib/htmlparser-1.3/htmlparser-1.3-with-transitions.jar:lib/jsr305/jsr305.jar:lib/junit/junit.jar:lib/junit/junit-dep.jar:lib/junit/junit-src.jar:. ./src/main/java/org/owasp/html/*.java ./src/main/java/org/owasp/html/examples/*.java -d ./target/classes
 
-#I think this can be removed but don't want to try while editing so many other things
 cd ../../../scripts
 
 #Compile all of our test drivers from the testCasesExecutables directory
@@ -28,14 +27,14 @@ do
 	(javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:/home/securepaas/TrottingGiraffes/TrottingGiraffes/TestAutomation/project/src/java-html-sanitizer-master/lib org/trotting/$FILENAME) 2>/dev/null
 
 done
-
-#I think this can be removed but don't want to try while editing so many other things
-cd ../../../scripts
+#I think this can be removed but dont want to try while editing so many other things
+#cd ../../../scripts
 
 #Iterates through each text file within the TestCases directory 
 #This will pull the information and run the matching java driver
 ls $TESTCASES | while read FILENAME 
 do
+
 	echo "Running testcase executable based off of $FILENAME specifications:"
 	echo ""
 
@@ -49,7 +48,7 @@ do
 		TESTCASESLINELENGTH=${#TESTCASESLINE}
 
 		#Remove numbers at beginning of lines
-		#For instance, if the line says "1. Hello", this will return "Hello"
+		#For instance, if the line says 1. Hello, this will return Hello
 		TESTCASESLINECHOPPED="${TESTCASESLINE:3:$TESTCASESLINELENGTH}"
 		
 		#Deletes any comments within the test case files, marked by ## (double hash)
@@ -59,6 +58,7 @@ do
 		
 		CHARPOS=$(echo $TESTCASESLINECHOPPED | grep -b -o "##" | cut -d: -f1)
 		
+
 		#Get substring of the line with comment removed
 		echo ${TESTCASESLINECHOPPED:0:$CHARPOS}	
 		CHOPPED=${TESTCASESLINECHOPPED:0:$CHARPOS}
@@ -69,21 +69,32 @@ do
 			TESTNUMBER=$CHOPPED
 		fi
 
+		#If second line, this indicates the test requirement
+		#if [ $COUNTER -eq 2 ]
+		#then
+			#TESTNUMBER=$CHOPPED
+		#fi
+
+		#If third line, this indicates the class to be tested
 		if [ $COUNTER -eq 3 ]
 		then
 			CLASSNAME=$CHOPPED
 		fi
 
+		#If fourth line, this indicates the method to be tested
 		if [ $COUNTER -eq 4 ]
 		then
 			METHOD=$CHOPPED
 		fi
 
+		#If fifth line, this indicates the test parameter to be inserted into the method
 		if [ $COUNTER -eq 5 ]
 		then
 			TEST=$CHOPPED
 		fi
 
+		#If sixth line, this indicates the oracle, which is the expected result returned from the tested method
+		#In addition to pulling the oracle, at this step we also run the driver
 		if [ $COUNTER -eq 6 ]
 		then
 			ORACLE=$CHOPPED
@@ -97,15 +108,19 @@ do
 
 			JAVASTRING="TEST$CLASSNAME"
 
-		OUTPUTFILE1="../reports/TEST$TESTNUMBER"
-		OUTPUTFILE2="$CLASSNAME.txt"
-		OUTPUTFILE="$OUTPUTFILE1$OUTPUTFILE2"
+			#Temporary variables used for string building the name of the results file
+			OUTPUTFILE1="../reports/TEST$TESTNUMBER"
+			OUTPUTFILE2="$CLASSNAME.txt"
+			
+			#File where the results will be printed to
+			OUTPUTFILE="$OUTPUTFILE1$OUTPUTFILE2"
 
+			#Ensure outputfile exists before trying to print to it
+			touch $OUTPUTFILE
 
-		touch $OUTPUTFILE
-
-			#javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME org/trotting/$JAVACSTRING.java && 
-echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/$JAVASTRING $TEST $ORACLE) > $OUTPUTFILE
+			#Creates a subshell to run the java driver #in so that we can capture the ouput and print it to outputfile
+			#This will overwrite any existing results from previous runs
+			echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib/guava-libraries/guava.jar org/trotting/$JAVASTRING $TEST $ORACLE) > $OUTPUTFILE
 
 
 
@@ -113,15 +128,11 @@ echo $(java -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_
 		fi
 
 	done
- 
 	echo ""
 	echo ""
 
 done
-
+		#File to print html into to display our results table
 		HTMLOUTPUTFILE="../reports/myResults.html"
 		cd ../scripts
-		
-		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../reports && firefox -new-tab ./$HTMLOUTPUTFILE) 
-#2>/dev/null
-
+		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../reports && firefox -new-tab ./$HTMLOUTPUTFILE)
