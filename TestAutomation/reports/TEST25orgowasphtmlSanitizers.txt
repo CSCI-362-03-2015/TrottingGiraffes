@@ -1,1 +1,0 @@
-org.owasp.html.Sanitizers BLOCKS.sanitize(String) &lt;b&gt;&lt;p&gt;&lt;b&gt;&lt;b&gt;&lt;p&gt;hello&lt;/p&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;&lt;/b&gt; &lt;p&gt;&lt;/p&gt;&lt;p&gt;hello&lt;/p&gt; &lt;p&gt;&lt;/p&gt;&lt;p&gt;hello&lt;/p&gt; passed

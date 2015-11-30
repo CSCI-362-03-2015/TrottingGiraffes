@@ -1,1 +1,0 @@
-org.owasp.html.Encoding decodeHtml(String) &amp;#x0a; \\n \\n passed

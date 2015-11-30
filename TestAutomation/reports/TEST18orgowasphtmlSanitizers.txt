@@ -1,1 +1,0 @@
-org.owasp.html.Sanitizers FORMATTING.sanitize(String) &gt;! &gt;! &gt;! passed

@@ -1,1 +1,0 @@
-org.owasp.html.Sanitizers FORMATTING.sanitize(String) &lt;p&gt;Hello,&lt;bonclick=alert(1337)&gt;World&lt;/b&gt;!&lt;/p&gt; Hello,World! Hello,World! passed
