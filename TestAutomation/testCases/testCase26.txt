@@ -1,5 +1,5 @@
 1. 26##test number or ID
-2. ##requirement being tested
+2. isHex handles if unicode values are valid hexidecimal values #requirement being tested
 3. orgowasphtmlIsHex##component being tested
 4. isHex##method being tested
 5. 0x00AA##command-line arguments
