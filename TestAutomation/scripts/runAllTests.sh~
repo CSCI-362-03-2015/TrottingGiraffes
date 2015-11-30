@@ -147,4 +147,4 @@ done
 		#File to print html into to display our results table
 		HTMLOUTPUTFILE="../reports/testResults$(timestamp).html"
 		cd ../scripts
-		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../temp && xdg-open ./$HTMLOUTPUTFILE &) && removeTemp
+		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../temp && xdg-open ./$HTMLOUTPUTFILE &)
