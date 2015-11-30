@@ -1,5 +1,5 @@
 1. 25##test number or ID
-2. Testing how BLOCKS deals with several tags including <p> tags##requirement being tested
+2. sanitize handles removal of elements from HTML strings  ##requirement being tested
 3. orgowasphtmlSanitizers##component being tested
 4. sanitize##method being tested
 5. BLOCKS <b><p><b><b><p>hello</p></b></b></p></b>##command-line arguments
