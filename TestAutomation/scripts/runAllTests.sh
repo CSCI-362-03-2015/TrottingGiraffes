@@ -24,7 +24,7 @@ do
 	#test to see if we can cat all files in the testcases directory and pipe errors into /dev/null.
 	#Errors come from .class files already existing within the folder, instead of purely .java files.
 	#javac will write over the previously existing files, so the error is not important
-	(javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:/home/securepaas/TrottingGiraffes/TrottingGiraffes/TestAutomation/project/src/java-html-sanitizer-master/lib org/trotting/$FILENAME) 2>/dev/null
+	(javac -cp ../project/src/java-html-sanitizer-master/target/classes/:$JAVA_HOME:../project/src/java-html-sanitizer-master/lib org/trotting/$FILENAME) 2>/dev/null
 
 done
 #I think this can be removed but dont want to try while editing so many other things
@@ -135,4 +135,4 @@ done
 		#File to print html into to display our results table
 		HTMLOUTPUTFILE="../reports/myResults.html"
 		cd ../scripts
-		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../reports && firefox -new-tab ./$HTMLOUTPUTFILE)
+		(./toCompiledHtmlWithCss.sh $HTMLOUTPUTFILE ../reports && xdg-open ./$HTMLOUTPUTFILE &)

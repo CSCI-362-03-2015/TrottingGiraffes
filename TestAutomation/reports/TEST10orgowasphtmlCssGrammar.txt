@@ -1,1 +1,1 @@
-org.owasp.html.CssGrammar cssContent(String) foo "foo" failed
+org.owasp.html.CssGrammar cssContent(String) \\"foo\\" \\"foo\\" foo failed

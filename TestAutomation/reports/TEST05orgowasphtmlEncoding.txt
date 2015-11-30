@@ -1,1 +1,1 @@
-org.owasp.html.Encoding decodeHtml(String) "&#x00a;" "\n" passed
+org.owasp.html.Encoding decodeHtml(String) &amp;#x00a; \\n \\n passed

@@ -1,1 +1,1 @@
-org.owasp.html.Sanitizers FORMATTING.sanitize(String) Hello,<b>World</b>! Hello,<b>World</b>! passed
+org.owasp.html.Sanitizers FORMATTING.sanitize(String) Hello,&lt;b&gt;World&lt;/b&gt;! Hello,&lt;b&gt;World&lt;/b&gt;! Hello,&lt;b&gt;World&lt;/b&gt;! passed

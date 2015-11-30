@@ -1,1 +1,1 @@
-org.owasp.html.Sanitizers BLOCKS.sanitize(String) <p>Hello,<b>World</b>!</p> <p>Hello,World!</p> passed
+org.owasp.html.Sanitizers BLOCKS.sanitize(String) &lt;p&gt;Hello,&lt;b&gt;World&lt;/b&gt;!&lt;/p&gt; &lt;p&gt;Hello,World!&lt;/p&gt; &lt;p&gt;Hello,World!&lt;/p&gt; passed

@@ -8,18 +8,25 @@ class TESTorgowasphtmlEncoding{
 			String theTest = args[0];
 
 			String result = org.owasp.html.Encoding.decodeHtml(theTest);
-			if(theOracle.contains("\\n")){
-				//System.out.println("Oracle contains: \\n");
-				 theOracle = theOracle.replace("\\n","\n");
-			}
-	
 
-			if((result).equals(theOracle)){
+			theOracle = theOracle.replaceAll("\"", "\\\\\"");
+			theOracle = theOracle.replaceAll("\\\\", "\\\\\\\\");
+
+			theTest = theTest.replaceAll("\"", "\\\\\"");
+			theTest = theTest.replaceAll("\\\\", "\\\\\\\\");
+			theTest = theTest.replaceAll("&", "&amp;");
+
+			result = result.replaceAll("\"", "\\\\\"");
+			result = result.replaceAll("\\\\", "\\\\\\\\");
+			result = result.replaceAll("\n", "\\\\\\\\n");
+
+			if((result).compareTo(theOracle) == 0){
 				try{
 					System.out.println("org.owasp.html.Encoding");
 					System.out.println("decodeHtml(String)");
-					System.out.println(args[0]);
-					System.out.println(args[1]);
+					System.out.println(theTest);
+					System.out.println(result);
+					System.out.println(theOracle);
 					System.out.println("passed\n");
 				
 				}catch(Exception e){
@@ -31,8 +38,9 @@ class TESTorgowasphtmlEncoding{
 				try{
 					System.out.println("org.owasp.html.Encoding");
 					System.out.println("decodeHtml(String)");
-					System.out.println(args[0]);
-					System.out.println(args[1]);
+					System.out.println(theTest);
+					System.out.println(result);
+					System.out.println(theOracle);
 					System.out.println("failed\n");
 					
 				}catch(Exception e){

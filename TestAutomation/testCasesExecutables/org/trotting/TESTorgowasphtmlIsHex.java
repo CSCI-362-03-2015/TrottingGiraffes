@@ -13,22 +13,24 @@ class TESTorgowasphtmlIsHex{
 			    	result = org.owasp.html.CssGrammar.isHex(0x09Af);
 			}
 			else{
-			try{
-				Integer.parseInt(theTest, 16);
-				result = true;
-			}catch(Exception e){
-				result = false;
-			}
+				try{
+					Integer.parseInt(theTest, 16);
+					result = true;
+				}catch(Exception e){
+					result = false;
+				}
 			}
 			
-	
+			theOracleString = theOracleString.replaceAll("\"", "\\\\\"");
+			theOracleString = theOracleString.replaceAll("\\\\", "\\\\\\\\");
 
 			if(result == theOracle){
 				try{
 					System.out.println("org.owasp.html.CssGrammar");
 					System.out.println("isHex(int)");
 					System.out.println(args[0]);
-					System.out.println(args[1]);
+					System.out.println(result);
+					System.out.println(theOracleString);
 					System.out.println("passed\n");
 				
 				}catch(Exception e){
@@ -41,7 +43,8 @@ class TESTorgowasphtmlIsHex{
 					System.out.println("org.owasp.html.CssGrammar");
 					System.out.println("isHex(int)");
 					System.out.println(args[0]);
-					System.out.println(args[1]);
+					System.out.println(result);
+					System.out.println(theOracleString);
 					System.out.println("failed\n");
 				}catch(Exception e){
 					e.printStackTrace();

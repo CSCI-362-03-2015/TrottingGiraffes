@@ -88,7 +88,6 @@ class TESTorgowasphtmlSanitizers{
 						result = result.replaceAll("\\\\", "\\\\\\\\");
 						result = result.replaceAll("<", "&lt;");
 						result = result.replaceAll(">", "&gt;");
-
 						System.out.println("org.owasp.html.Sanitizers");
 						System.out.println("BLOCKS.sanitize(String)");
 						System.out.println(theTest);

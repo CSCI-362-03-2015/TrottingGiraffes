@@ -1,19 +1,27 @@
 package org.trotting;
 
-class TESTorgowasphtmlCssGrammar{
+class TESTorgowasphtmlEncoding{
 	
 	public static void main(String[] args){
 		try{
 			String theOracle = args[1];
 			String theTest = args[0];
 
-			String result = org.owasp.html.CssGrammar.cssContent(theTest);
+			String result = org.owasp.html.Encoding.decodeHtml(theTest);
+			
+			//theOracle = theOracle.replaceAll("\"", "\\\\\"");
+			theOracle = theOracle.replaceAll("\\\\", "\\\\\\\\");
+			//theOracle = theOracle.replaceAll("&", "&amp;");
+	
+			theTest = theTest.replaceAll("\"", "\\\\\"");
+			theTest = theTest.replaceAll("\\\\", "\\\\\\\\");
 
 			theOracle = theOracle.replaceAll("\"", "\\\\\"");
 			theOracle = theOracle.replaceAll("\\\\", "\\\\\\\\");
 
 			theTest = theTest.replaceAll("\"", "\\\\\"");
 			theTest = theTest.replaceAll("\\\\", "\\\\\\\\");
+			theTest = theTest.replaceAll("&", "&amp;");
 
 			result = result.replaceAll("\"", "\\\\\"");
 			result = result.replaceAll("\\\\", "\\\\\\\\");
@@ -21,10 +29,8 @@ class TESTorgowasphtmlCssGrammar{
 
 			if((result).compareTo(theOracle) == 0){
 				try{
-
-					System.out.println("org.owasp.html.CssGrammar");
-					System.out.println("cssContent(String)");
-
+					System.out.println("org.owasp.html.Encoding");
+					System.out.println("decodeHtml(String)");
 					System.out.println(theTest);
 					System.out.println(result);
 					System.out.println(theOracle);
@@ -37,12 +43,13 @@ class TESTorgowasphtmlCssGrammar{
 			}
 			else{
 				try{
-					System.out.println("org.owasp.html.CssGrammar");
-					System.out.println("cssContent(String)");
+					System.out.println("org.owasp.html.Encoding");
+					System.out.println("decodeHtml(String)");
 					System.out.println(theTest);
 					System.out.println(result);
 					System.out.println(theOracle);
 					System.out.println("failed\n");
+					
 				}catch(Exception e){
 					e.printStackTrace();
 				}
