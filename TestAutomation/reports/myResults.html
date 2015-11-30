@@ -182,7 +182,7 @@
 <td class="tg-yw4l">17</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">FORMATTING.sanitize(String)</td>
-<td class="tg-yw4l">Testing how sanitize deals with formatting tags</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">Hello,&lt;b&gt;World&lt;/b&gt;!</td>
 <td class="tg-yw4l">Hello,&lt;b&gt;World&lt;/b&gt;!</td>
 <td class="tg-yw4l">Hello,&lt;b&gt;World&lt;/b&gt;!</td>
@@ -192,7 +192,7 @@
 <td class="tg-yw4l">18</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">FORMATTING.sanitize(String)</td>
-<td class="tg-yw4l">Testing the HTML Sanitizer </td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&gt;!</td>
 <td class="tg-yw4l">&gt;!</td>
 <td class="tg-yw4l">&gt;!</td>
@@ -202,7 +202,7 @@
 <td class="tg-yw4l">19</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">FORMATTING.sanitize(String)</td>
-<td class="tg-yw4l">Testing how sanitize deals with formatting tags including onClick</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&lt;p&gt;Hello,&lt;bonclick=alert(1337)&gt;World&lt;/b&gt;!&lt;/p&gt;</td>
 <td class="tg-yw4l">Hello,World!</td>
 <td class="tg-yw4l">Hello,World!</td>
@@ -212,7 +212,7 @@
 <td class="tg-yw4l">20</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing a tagless String with sanitize and BLOCKS</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">Hello,World!</td>
 <td class="tg-yw4l">Hello,World!</td>
 <td class="tg-yw4l">Hello,World!</td>
@@ -222,7 +222,7 @@
 <td class="tg-yw4l">21</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing how sanitize and BLOCKS pulls out tags</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">Hello,&lt;b&gt;World&lt;/b&gt;!</td>
 <td class="tg-yw4l">Hello,World!</td>
 <td class="tg-yw4l">Hello,World!</td>
@@ -232,7 +232,7 @@
 <td class="tg-yw4l">22</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing how sanitize and BLOCKS pulls out several tags</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&lt;b&nbsp;onclick=alert(1337)&gt;Hello,&lt;b&gt;World&lt;/b&gt;!&lt;/b&gt;</td>
 <td class="tg-yw4l">Hello,World!</td>
 <td class="tg-yw4l">Hello,World!</td>
@@ -242,7 +242,7 @@
 <td class="tg-yw4l">23</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing how BLOCKS pulls out any tag other than <p></td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&lt;p&gt;Hello,&lt;b&gt;World&lt;/b&gt;!&lt;/p&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;Hello,World!&lt;/p&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;Hello,World!&lt;/p&gt;</td>
@@ -252,7 +252,7 @@
 <td class="tg-yw4l">24</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing how BLOCKS will deal with nothing but a <p> tag</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&lt;p&gt;&lt;/p&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;&lt;/p&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;&lt;/p&gt;</td>
@@ -262,7 +262,7 @@
 <td class="tg-yw4l">25</td>
 <td class="tg-yw4l">org.owasp.html.Sanitizers</td>
 <td class="tg-yw4l">BLOCKS.sanitize(String)</td>
-<td class="tg-yw4l">Testing how BLOCKS deals with several tags including <p> tags</td>
+<td class="tg-yw4l">sanitize handles removal of elements from HTML strings </td>
 <td class="tg-yw4l">&lt;b&gt;&lt;p&gt;&lt;b&gt;&lt;b&gt;&lt;p&gt;hello&lt;/p&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;&lt;/b&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;&lt;/p&gt;&lt;p&gt;hello&lt;/p&gt;</td>
 <td class="tg-yw4l">&lt;p&gt;&lt;/p&gt;&lt;p&gt;hello&lt;/p&gt;</td>
