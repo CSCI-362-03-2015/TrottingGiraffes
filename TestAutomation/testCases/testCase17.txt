@@ -1,5 +1,5 @@
 1. 17##test number or ID
-2. Testing how sanitize deals with formatting tags##requirement being tested
+2. sanitize handles removal of elements from HTML strings  ##requirement being tested
 3. orgowasphtmlSanitizers##component being tested
 4. sanitize##method being tested
 5. FORMATTING Hello,<b>World</b>!##command-line arguments
