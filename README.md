@@ -10,3 +10,5 @@ customizable white-list.
 All components of this project were built and compiled using Linux
 distributions, specifically RHEL and Ubuntu.
 All code is written in Java.
+
+Please read our [PDF report](https://github.com/CSCI-362-03-2015/TrottingGiraffes/blob/master/TrottingGiraffes_finalReport.pdf) for information on installation.
