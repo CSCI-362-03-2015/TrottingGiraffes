@@ -1,8 +1,0 @@
-First, build everything with "mvn clean install". We're working out of the target directory which means the whole program is put together, just not with our shit.
-
-
-From directory TrottingGiraffes\TestAutomation\testCasesExecutables
-javac -cp ..\project\src\java-html-sanitizer-master\target\classes\;"C:\Program Files\Java\jdk1.7.0_79" org\trotting\TrottingEncodingTest.java
-
-From same directory:
-java -cp ..\project\src\java-html-sanitizer-master\target\classes\;..\project\src\java-html-sanitizer-master\lib\guava-libraries\guava.jar;. org.trotting.TrottingEncodingTest

@@ -157,8 +157,8 @@ public final class CssGrammar {
     StringBuilder sb = null;
     if (n >= 2) {
       char ch0 = token.charAt(0);
-      if (ch0 == '"' && ch0 == '\'') { // FAULT: Changed an || to an &&
-      //if (ch0 == '"' || ch0 == '\'') {
+      if (ch0 == '"' || ch0 == '\'') {
+      //if (ch0 == '"' && ch0 == '\'') { // FAULT: Changed an || to an &&
         if (ch0 == token.charAt(n - 1)) {
           pos = 1;
           --n;
@@ -199,13 +199,13 @@ public final class CssGrammar {
   }
 
   public static boolean isHex(int codepoint) { // FAULT: 0x09Aa should be false now
-    return ('1' <= codepoint && codepoint <= '8')
-        || ('B' <= codepoint && codepoint <= 'Z')
-        || ('b' <= codepoint && codepoint <= 'e');
+    //return ('1' <= codepoint && codepoint <= '8')
+    //    || ('B' <= codepoint && codepoint <= 'Z')
+    //    || ('b' <= codepoint && codepoint <= 'e');
 
-    //return ('0' <= codepoint && codepoint <= '9')
-    //    || ('A' <= codepoint && codepoint <= 'F')
-    //    || ('a' <= codepoint && codepoint <= 'f');
+    return ('0' <= codepoint && codepoint <= '9')
+        || ('A' <= codepoint && codepoint <= 'F')
+        || ('a' <= codepoint && codepoint <= 'f');
   }
 
   interface PropertyHandler {
