@@ -10,16 +10,18 @@ timestamp() {
 }
 
 removeTemp() {
-  rm -rf ../testCasesExecutables/org/trotting/*~
-  rm -rf ../testCasesExecutables/org/trotting/*.class
-  rm -rf ../testCases/*~
-  rm -rf ../temp/*
+  rm -rf ./testCasesExecutables/org/trotting/*~
+  rm -rf ./testCasesExecutables/org/trotting/*.class
+  rm -rf ./testCases/*~
+  rm -rf ./temp/*
+  mkdir ./temp 2>/dev/null
+  mkdir ./reports 2>/dev/null
 }
 
 removeTemp
 
 #Navigate to the main folder for the OWASP Java HTML Sanitizer
-cd ../project/src/java-html-sanitizer-master
+cd ./project/src/java-html-sanitizer-master
 
 #Creates a target directory next to the source folder to save the compiled class files too	
 mkdir -p target/classes

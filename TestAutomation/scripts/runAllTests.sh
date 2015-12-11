@@ -10,22 +10,24 @@ timestamp() {
 }
 
 removeTemp() {
-  rm -rf ../testCasesExecutables/org/trotting/*~
-  rm -rf ../testCasesExecutables/org/trotting/*.class
-  rm -rf ../testCases/*~
-  rm -rf ../temp/*
+  rm -rf ./testCasesExecutables/org/trotting/*~
+  rm -rf ./testCasesExecutables/org/trotting/*.class
+  rm -rf ./testCases/*~
+  rm -rf ./temp/*
+  mkdir ./temp 2>/dev/null
+  mkdir ./reports 2>/dev/null
 }
 
 removeTemp
 
 #Navigate to the main folder for the OWASP Java HTML Sanitizer
-cd ../project/src/java-html-sanitizer-master
+cd ./project/src/java-html-sanitizer-master
 
 #Creates a target directory next to the source folder to save the compiled class files too	
 mkdir -p target/classes
 
 #Compile the OWASP Project files
-javac -cp $JAVA_HOME:lib/guava-libraries/guava.jar:lib/guava-libraries/guava-src.jar:lib/commons-codec-1.4/commons-codec-1.4.jar:lib/htmlparser-1.3/htmlparser-1.3.jar:lib/htmlparser-1.3/htmlparser-1.3-with-transitions.jar:lib/jsr305/jsr305.jar:lib/junit/junit.jar:lib/junit/junit-dep.jar:lib/junit/junit-src.jar:. ./src/main/java/org/owasp/html/*.java ./src/main/java/org/owasp/html/examples/*.java -d ./target/classes
+javac -cp $JAVA_HOME:lib/guava-libraries/guava.jar:lib/guava-libraries/guava-src.jar:lib/commons-codec-1.4/commons-codec-1.4.jar:lib/htmlparser-1.3/htmlparser-1.3.jar:lib/htmlparser-1.3/htmlparser-1.3-with-transitions.jar:lib/jsr305/jsr305.jar:lib/junit/junit.jar:lib/junit/junit-dep.jar:lib/junit/junit-src.jar:. ./src/main/java/org/owasp/html/*.java ./src/main/java/org/owasp/html/examples/*.java -d ./target/classes 2>/dev/null
 
 cd ../../../scripts
 
